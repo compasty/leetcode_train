@@ -14,13 +14,13 @@ public:
             int ele = nums[i];
             auto iter = sum_map.find(ele);
             if (iter != sum_map.end()) {
-                return vector<int>{iter -> second, i};
+                return { iter -> second, i };
             } else {
                 sum_map[target - ele] = i;
             }
             i++;
         }
-        return vector<int>{0, 1};
+        return {};
     }
 };
 
